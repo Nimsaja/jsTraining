@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet">
+  <title>My test page</title>
+</head>
+
+<body class="no-widget">
+    <form>
+      <select name="myFruit">
+        <option>Cherry</option>
+        <option>Lemon</option>
+        <option>Banana</option>
+        <option>Strawberry</option>
+        <option>Apple</option>
+      </select>
+  
+      <div class="select">
+        <span class="value">Cherry</span>
+        <ul class="optList hidden">
+          <li class="option">Cherry</li>
+          <li class="option">Lemon</li>
+          <li class="option">Banana</li>
+          <li class="option">Strawberry</li>
+          <li class="option">Apple</li>
+        </ul>
+      </div>
+    </form>
+  
+  </body>
+
+<body class="widget">
+
+  <!-- This is our main container for our widget.
+     The tabindex attribute is what allows the user to focus the widget. 
+     We'll see later that it's better to set it through JavaScript. -->
+  <div class="select" tabindex="0">
+
+    <!-- This container will be used to display the current value of the widget -->
+    <span class="value">Cherry</span>
+
+    <!-- This container will contain all the options available for our widget.
+             Because it's a list, it makes sense to use the ul element. -->
+    <ul class="optList">
+      <!-- Each option only contains the value to be displayed, we'll see later
+               how to handle the real value that will be sent with the form data -->
+      <li class="option">Cherry</li>
+      <li class="option">Lemon</li>
+      <li class="option">Banana</li>
+      <li class="option">Strawberry</li>
+      <li class="option">Apple</li>
+    </ul>
+
+  </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
