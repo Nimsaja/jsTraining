@@ -1,0 +1,63 @@
+/* Grundlegender Tabellenaufbau */
+table {
+  font: 1em sans-serif;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Alle <td>s in einer <table> und alle <th>s innerhalb einer <table>
+   Komma ist kein Kombinator, sondern erlaubt uns nur, mehrere Selektoren
+   mit dem gleichen CSS Regelsatz (ruleset) zu erfassen */
+table td,
+table th {
+  border: 1px solid black;
+  padding: 0.5em 0.5em 0.4em;
+}
+
+/* Alle <th>s innerhalb <thead>s sind innerhalb <table>s */
+table thead th {
+  color: white;
+  background: black;
+}
+
+/* Alle <td>s, denen ein anderes <td> vorangeht,
+   innerhalb eines <tbody>, innerhalb einer <table> */
+table tbody td+td {
+  text-align: center;
+}
+
+/* Alle <td>s, die ein letztes Kindelement sind,
+   innerhalb eines <tbody>, innerhalb einer <table> */
+table tbody td:last-child {
+  text-align: right
+}
+
+/* Alle <th>s, innerhalb eines <tfoot>s, innerhalb einer <table> */
+table tfoot th {
+  text-align: right;
+  border-top-width: 5px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Alle <td>s, denen ein <th> vorangeht, innerhalb einer <table> */
+table th+td {
+  text-align: right;
+  border-top-width: 5px;
+  color: white;
+  background: black;
+}
+
+/* Alle Pseudo-Elemente "before" <td>s, die ein letztes Kindelement sind,
+   die in Elementen mit der Klasse "with-currency" vorkommen,
+   die auch das Attribut "lang" mit dem Wert "en-US" aufweisen. */
+.with-currency[lang="en-US"] td:last-child::before {
+  content: '$';
+}
+
+/* Alle Pseudo-Elemente "after" <td>s, die ein letztes Kindelement sind,
+     und in HTML-Elementen mit der Klasse "with-currency" auftauchen,
+     die auch ein Attribut "lang" mit dem Wert "fr" aufweisen. */
+.with-currency[lang="fr"] td:last-child::after {
+  content: ' €';
+}
