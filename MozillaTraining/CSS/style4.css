@@ -1,0 +1,21 @@
+/* Diese Regeln formatieren unseren Link für jeden Zustand */
+a {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Bereits angeklickte, also besuchte (visited) Links sollen die gleiche
+Farbe wie unbesuchte haben */
+a:visited {
+  color: blue;
+}
+
+/* Der Link soll aber markiert werden, wenn man mit der Maus
+darüberfährt (hovered), er durch anklicken aktiviert wird (activated)
+oder den Eingabefokus der Tastatur erhalten hat. */
+a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+}

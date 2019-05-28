@@ -1,0 +1,73 @@
+/* All p elements are red */
+p {
+  color: red;
+}
+
+/* All div elements are blue */
+div {
+  color: black;
+}
+
+/* The element with the class "first" is bolded */
+.first {
+  font-weight: bold;
+}
+
+/* All the elements with the class "done" are strikethrough */
+.done {
+  text-decoration: line-through;
+}
+
+#polite {
+  font-family: cursive;
+}
+#rude {
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+/* Alle Elemente mit dem Attribut "data-vegetable"
+   bekommen grüne Textfarbe */
+   [data-vegetable] {
+    color: green
+  }
+  
+  /* Alle Elemente mit dem Attribut "data-vegetable"
+     vom exakten Wert "liquid" bekommen einen goldenen
+     Hintergrund */
+  [data-vegetable="liquid"] {
+    background-color: goldenrod;
+  }
+  
+  /* Alle Elemente mit dem Attribut "data-vegetable",
+     die (neben möglichen anderen Werten, auch) den ganzen Wert "spicy" enthalten,
+     erhalten eine rote Textfarbe */
+  [data-vegetable~="spicy"] {
+    color: red;
+  }
+
+  /* Klassischer Gebrauch für Sprachauswahl 
+    stimmt mit fr überein oder beginnt mit fr
+  */
+[lang|=fr] {
+  font-weight: bold;
+}
+
+/* Alle Elemente mit dem Attribut "data-vegetable", 
+die (neben möglichen anderen Werten) den Wert "not spicy" enthalten,
+werden auf grüne Textfarbe zurückgesetzt. */
+[data-vegetable*="not spicy"] {
+  color: green;
+}
+
+/* Alle Elemente mit dem Attribut "data-quantity", 
+deren Wert auf die Zeichenfolge "kg" endet. */
+[data-quantity$="kg"] {
+  font-weight: bold;
+}
+
+/* Alle Elemente mit dem Attribut "data-quantity", 
+deren Wert mit der Zeichenfolge "optional" beginnt. */
+[data-quantity^="optional"] {
+  opacity: 0.5;
+}

@@ -1,0 +1,20 @@
+/* Alle Elemente mit einem "href"-Attribut, deren Werte mit
+   "http" beginnen, erhalten ein Pfeilsymbol nach ihrem Inhalt(stext),
+   um anzuzeigen, dass es sich um einen externen Verweis handelt. */
+   [href^=http]::after {
+    content: '⤴';
+  }
+
+  p::first-line{
+    text-transform: uppercase;
+  }
+  
+  p::first-letter {
+    font-size: 3em;
+    border: 1px solid black;
+    background: red;
+    display: block;
+    float: left;
+    padding: 2px;
+    margin-right: 4px;
+  }
