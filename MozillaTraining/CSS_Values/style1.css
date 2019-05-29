@@ -19,3 +19,54 @@ p:nth-child(3) {
   width: 350px;
   font-size: 30px;
 }
+
+/* line height 5 times of font size */
+p:nth-child(4) {
+  line-height: 5;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+p:nth-child(5) {
+  color: red;
+  width: 100px;
+  font-size: 40px;
+  transform-origin: center;
+}
+
+p:nth-child(5):hover {
+  animation-name: rotate;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
+}
+
+div .boxes {
+  margin: 10px;
+  font-size: 200%;
+  color: white;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.boxes:nth-child(1) {
+  background-color: red;
+  width: 650px;
+}
+
+.boxes:nth-child(2) {
+  background-color: blue;
+  width: 75%;
+}
+
+.color1 {
+  background-color: red;
+}
